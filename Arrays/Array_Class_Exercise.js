@@ -32,6 +32,11 @@ class DynamicArray {
   findLargest = () => {
     return Math.max(...this.items);
   }
+
+  intersect = () => {
+    let intersections = this.items.filter(item => otherArray.includes(item))
+    return intersections
+  }
 }
 
 const otherArray = [20, 30, 60];
