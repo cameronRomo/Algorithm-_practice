@@ -37,6 +37,14 @@ class DynamicArray {
     let intersections = this.items.filter(item => otherArray.includes(item))
     return intersections
   }
+  
+  reverse = () => {
+    let reversedArray = [];
+    for (let i = this.items.length - 1; i >= 0; i--) {
+      reversedArray.push(this.items[i]);
+    }
+    return reversedArray;
+  }
 }
 
 const otherArray = [20, 30, 60];
