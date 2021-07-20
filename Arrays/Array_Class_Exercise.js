@@ -37,13 +37,18 @@ class DynamicArray {
     let intersections = this.items.filter(item => otherArray.includes(item))
     return intersections
   }
-  
+
   reverse = () => {
     let reversedArray = [];
     for (let i = this.items.length - 1; i >= 0; i--) {
       reversedArray.push(this.items[i]);
     }
     return reversedArray;
+  }
+
+  insertAt = (item, index) => {
+    this.items.splice(index, 0, item);
+    return this.items;
   }
 }
 
@@ -57,5 +62,6 @@ newArray.insert(40);
 // console.log(newArray.index(30));
 // console.log(newArray.findLargest());
 // console.log(newArray.intersect());
-console.log(newArray.reverse());
+// console.log(newArray.reverse());
+console.log(newArray.insertAt(7, 2));
 // newArray.print();
